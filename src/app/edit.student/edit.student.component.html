@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Update Students
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+  <ion-label position="floating" >Name</ion-label>
+  <ion-input  placeholder="Name" [(ngModel)]="student.name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating" >Email</ion-label>
+    <ion-input  placeholder="Email" [(ngModel)]="student.email"></ion-input>
+    </ion-item>
+    <ion-item>
+
+        <ion-item>
+            <ion-label>Date</ion-label>
+            <ion-datetime display-format="MMM DD, YYYY" [(ngModel)]="student.date"></ion-datetime>
+          </ion-item>
+
+          <ion-list>
+              
+            
+            <ion-item>
+              <ion-label>Language</ion-label>
+              <ion-select multiple="true" cancelText="Nah" okText="Okay!" [(ngModel)]="student.item">
+                  <ion-select-option value="English">English</ion-select-option>
+                  <ion-select-option value="Kannada">Kannada</ion-select-option>
+                  <ion-select-option value="Hindi">Hindi</ion-select-option>
+                  <ion-select-option value="Telugu">Telugu</ion-select-option>
+              </ion-select>
+            </ion-item>
+</ion-list>
+
+        <ion-label position="floating" >Addess</ion-label>
+        <ion-input  placeholder="Address" [(ngModel)]="student.address"></ion-input>
+        </ion-item>
+        <ion-item>
+        
+      <ion-label position="floating" >Phone</ion-label>
+      <ion-input  placeholder="Phone" [(ngModel)]="student.phone"></ion-input>
+      </ion-item>
+  <ion-button shape="round" expand="full" (click)="onUpdateStudent(student)">Update List</ion-button>
+</ion-content>

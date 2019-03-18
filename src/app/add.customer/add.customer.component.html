@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Add Customers
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+   <ion-row>
+   <ion-col text-center>
+  <ion-item>
+  <ion-label position="floating" >Id</ion-label>
+  <ion-input placeholder="Id" [(ngModel)]="customer.id1" readonly></ion-input>
+  </ion-item>
+  <ion-item>
+  <ion-label position="floating" >Name</ion-label>
+  <ion-input  placeholder="Name" [(ngModel)]="customer.name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating" >Email</ion-label>
+    <ion-input  placeholder="Email" [(ngModel)]="customer.email"></ion-input>
+    </ion-item>
+    
+
+<!-- date picker -->
+
+        <ion-item>
+            <ion-label>Date</ion-label>
+            <ion-datetime display-format="MMM DD, YYYY" [(ngModel)]="customer.date"></ion-datetime>
+          </ion-item>
+    
+          <!-- date picker end -->
+
+          <!-- single item selection -->
+<!-- 
+          <ion-list>
+              <ion-list-header>Single Item</ion-list-header> -->
+<!--             
+              <ion-item>
+                <ion-label>Item needed</ion-label>
+                <ion-select value="brown" okText="Okay" cancelText="Dismiss" [(ngModel)]="customer.item">
+                  <ion-select-option value="Rice">Rice</ion-select-option>
+                  <ion-select-option value="Curd">Curd</ion-select-option>
+                  <ion-select-option value="Chocolate">Chocolate</ion-select-option>
+                  <ion-select-option value="Bread">Bread</ion-select-option>
+                </ion-select>
+              </ion-item>
+            
+            </ion-list> -->
+
+          <!-- single item selection end -->
+
+          <!-- multiple items selection -->
+
+          <ion-list>
+              
+            
+              <ion-item>
+                <ion-label>Shop</ion-label>
+                <ion-select multiple="true" cancelText="Nah" okText="Okay!" [(ngModel)]="customer.item">
+                    <ion-select-option value="Rice">Rice</ion-select-option>
+                    <ion-select-option value="Curd">Curd</ion-select-option>
+                    <ion-select-option value="Chocolate">Chocolate</ion-select-option>
+                    <ion-select-option value="Bread">Bread</ion-select-option>
+                </ion-select>
+              </ion-item>
+</ion-list>
+          <!-- multiple items selection -->
+
+          <ion-item>
+        <ion-label position="floating" >Addess</ion-label>
+        <ion-input  placeholder="Address" [(ngModel)]="customer.address"></ion-input>
+          </ion-item>
+      
+        <ion-item>
+      <ion-label position="floating" >Phone</ion-label>
+      <ion-input  placeholder="Phone" [(ngModel)]="customer.phone"></ion-input>
+      </ion-item>
+  <ion-button shape="round" expand="full" (click)="onAddCustomer(customer)">Update List</ion-button>
+
+  </ion-col>
+  </ion-row>
+  </ion-grid> 
+</ion-content>

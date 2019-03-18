@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        Update Customers
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-item>
+    <ion-label position="floating" >Name</ion-label>
+    <ion-input  placeholder="Name" [(ngModel)]="customer.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" >Email</ion-label>
+      <ion-input  placeholder="Email" [(ngModel)]="customer.email"></ion-input>
+      </ion-item>
+      <ion-item>
+
+          <ion-item>
+              <ion-label>Date</ion-label>
+              <ion-datetime display-format="MMM DD, YYYY" [(ngModel)]="customer.date"></ion-datetime>
+            </ion-item>
+
+            <ion-list>
+              
+            
+              <ion-item>
+                <ion-label>Shop</ion-label>
+                <ion-select multiple="true" cancelText="Nah" okText="Okay!" [(ngModel)]="customer.item">
+                    <ion-select-option value="Rice">Rice</ion-select-option>
+                    <ion-select-option value="Curd">Curd</ion-select-option>
+                    <ion-select-option value="Chocolate">Chocolate</ion-select-option>
+                    <ion-select-option value="Bread">Bread</ion-select-option>
+                </ion-select>
+              </ion-item>
+</ion-list>
+
+          <ion-label position="floating" >Addess</ion-label>
+          <ion-input  placeholder="Address" [(ngModel)]="customer.address"></ion-input>
+          </ion-item>
+          <ion-item>
+          
+        <ion-label position="floating" >Phone</ion-label>
+        <ion-input  placeholder="Phone" [(ngModel)]="customer.phone"></ion-input>
+        </ion-item>
+    <ion-button shape="round" expand="full" (click)="onUpdateCustomer(customer)">Update List</ion-button>
+  </ion-content>
